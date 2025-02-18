@@ -1,7 +1,16 @@
-{{page-title "MyFancyApp"}}
+<BasicDropdownWormhole />
 
-{{outlet}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+
+<Button>
+  Hello World
+</Button>
+
+<EuiComboBox
+  @options={{this.options}}
+  @selectedOptions={{this.selectedOptions}}
+  @onChange={{this.onChange}}
+  as |option|
+>
+  {{option.label}}
+</EuiComboBox>
